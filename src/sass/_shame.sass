@@ -1,0 +1,169 @@
+body
+  background: color(teal, light)
+  position: relative
+
+header
+  margin-top: 1.25rem
+  text-align: center
+
+h2,
+h3
+  margin: 0
+
+h2
+  font-size: 14vmin
+  font-weight: 500
+
+  span
+    font-weight: 300
+
+h3
+  font-size: 10vmin
+  font-weight: 300
+
+p
+  font-size: 8vmin
+  font-weight: 300
+  margin: 1.25rem 0 0
+  text-align: center
+
+  &:first-child
+    margin: 0
+
+  span
+    font-weight: 500
+
+  &.stats
+    margin: 0 0 1.25rem
+
+.hidden
+  display: none
+
+.timer
+  background: color(teal)
+  border-right: .3vw solid color(red, dark)
+  height: 1vh
+  position: absolute
+  width: 100vw
+
+  &.active
+    animation: countdown
+    animation-direction: forward
+    animation-duration: 8s
+    animation-fill-mode: forwards
+    animation-timing-function: linear
+
+.splash,
+.game,
+.gameover
+  align-items: center
+  background: rgba(white, .7)
+  bottom: 0
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  left: 0
+  opacity: 0
+  position: fixed
+  right: 0
+  top: 0
+  z-index: 9
+
+.game
+  background: none
+
+.active
+  opacity: 1
+  z-index: 99
+
+.number
+  font-size: 35vmin
+  font-weight: 700
+  text-align: center
+  transition: color .3s ease
+
+  &.wrong
+    color: color(red, dark)
+
+  &.correct
+    color: color(green, dark)
+
+.options
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-around
+  list-style: none outside none
+  margin: 0
+  padding: 0
+  width: 100%
+
+button
+  background: color(amber)
+  border: 0
+  border-radius: 4px
+  color: rgba(black, .5)
+  cursor: pointer
+  font-size: 6vmin
+  font-weight: 700
+  line-height: 1
+  margin: 1.25rem 0
+  padding: 2rem 0
+  text-align: center
+  transition: background .3s ease
+  user-select: none
+  width: 90%
+
+li
+  @extend button
+  width: 40%
+
+  &:hover
+    background: color(amber, dark)
+
+  &:active
+    background: color(yellow, dark)
+
+  &.wrong
+    background: color(red, dark)
+
+  &.correct
+    background: color(green, dark)
+
+@keyframes countdown
+  from
+    width: 100vw
+
+  to
+    width: 0
+
+.fade-in
+  animation: 1s ease-in forwards fadeIn
+
+.fade-out
+  animation: 1s ease-in forwards fadeOut
+
+@keyframes fadeOut
+  from
+    opacity: 1
+
+  to
+    opacity: 0
+
+@keyframes fadeIn
+  from
+    opacity: 0
+
+  to
+    opacity: 1
+
+@media (orientation: landscape)
+
+  h3
+    font-size: 8vmin
+
+  p
+    font-size: 6vmin
+
+  .options li
+    margin: 0
+    width: 22%

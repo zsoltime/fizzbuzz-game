@@ -1,0 +1,26 @@
+extends layout
+block title
+  title (3) FizzBuzz Game
+block content
+  .timer
+  .splash.active
+    header
+      h3 Ready for Some
+      h2 #[span Fizz]Buzz?
+    header.hidden
+      h3 Oops
+      h2 #[span Game]Over
+    .scores.hidden
+      p Your Score: #[span#score 0] points
+    .scores
+      p Best Score: #[span#max-score 0] points
+      p Max Level Reached: #[span#max-level 0]
+    button.start(data-from='splash') Start New Game
+  .game
+    .number#number 0
+    ul.options#options
+      li#fizz(data-order=1) Fizz
+      li#buzz(data-order=2) Buzz
+      li#fizzbuzz(data-order=3) FizzBuzz
+      li#none(data-order=4) None
+    p.stats Level: #[span#level 1] Lives: #[span#lives 3]

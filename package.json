@@ -1,0 +1,44 @@
+{
+  "name": "fizzbuzz-game",
+  "version": "0.1.0",
+  "description": "Day 3 of my 3 weeks game challenge",
+  "main": "",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "gulp",
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zsoltime/fizzbuzz-game.git"
+  },
+  "keywords": [
+    "game",
+    "challenge"
+  ],
+  "author": "Zsolt Meszaros",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-preset-es2015": "^6.18.0",
+    "browser-sync": "^2.17.5",
+    "chai": "^3.5.0",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-jade": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-sass-lint": "^1.2.0",
+    "gulp-uglify": "^2.0.0",
+    "mocha": "^3.1.2"
+  },
+  "bugs": {
+    "url": "https://github.com/zsoltime/fizzbuzz-game/issues"
+  },
+  "homepage": "https://github.com/zsoltime/fizzbuzz-game#readme"
+}
